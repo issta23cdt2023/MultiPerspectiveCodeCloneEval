@@ -1,5 +1,5 @@
 # Multi-Perspective Evaluation for Code Clone Detection
-This is the source code and dataset for multi-perspective evaluation for code clone detection
+This is the source code and dataset for multi-perspective evaluation for code clone detection.
 
 ## Repo Structure
 - dataset: save the source code of the two dataset
@@ -24,7 +24,7 @@ This is the source code and dataset for multi-perspective evaluation for code cl
 - Linear model： a sample linear model based on bag-of-words
 
 ## Dataset Description
-ConBigCloneBench(we call it cbcb here) and googlecodejam2(we cal it gcj here)
+ConBigCloneBench (we call it cbcb here) and googlecodejam2 (we cal it gcj here)
 download the dataset from (https://drive.google.com/file/d/1lPYBrll1uWxDcB5MZ308kDPfV4gVGc_Z/view?usp=sharing) and unzip it into folder 'dataset/'
 ![cbcb statistic](./fig/bcb_fun.jpg)
 ![gcj2 statistic](./fig/gcj2.jpg)
@@ -36,9 +36,9 @@ download the dataset from (https://drive.google.com/file/d/1lPYBrll1uWxDcB5MZ308
 - cross: 0 | 1 | 2 | 3, choose a code abstract level
 - cuda: cuda device
 ### Command
-for every model, you can use command like `python train.py --dataset gcj --split random0 --cross 1 --cuda 0` to train a model in specified evaluation perspective
+For every model, you can use command like `python train.py --dataset gcj --split random0 --cross 1 --cuda 0` to train a model in specified evaluation perspective
 ### Dependency
-the run enviroment for every model is different, you can use `conda env` or `virtual env`to organize the enviroments, the detail enviroment is as follow:
+The run enviroment for every model is different, you can use `conda env` or `virtual env`to organize the enviroments, the detail enviroment is as follow:
 ##### ASTNN
 pytorch == 1.9.0 + cuda10.2
 javalang == 0.13.0
