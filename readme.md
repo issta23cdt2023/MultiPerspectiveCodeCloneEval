@@ -1,13 +1,13 @@
 # Multi-Perspective Evaluation for Code Clone Detection
-this is the source code and dataset for multi-perspective evaluation for code clone detection
+This is the source code and dataset for multi-perspective evaluation for code clone detection
 
 ## Repo Structure
 - dataset: save the source code of the two dataset
-  - cbcb: Conbigclonebench
+  - cbcb: ConBigCloneBench
     - code0 ~ code3: codes after code abstract described in the paper
     - functions_noerr.csv: function information in cbcb
     - cbcb.json: new startine and endline number after analyzed with call graph, which one function sample may become a multi function sample with more than one start-end line number 
-  - gcj:  Googlecodejam2
+  - gcj:  GoogleCodeJam2
     - code0 ~ code3 similar to cbcb
     - gcj.csv: origin data gathered from internet 
   - train_split: split the data into train test eval from different perspective described in the paper
@@ -24,20 +24,20 @@ this is the source code and dataset for multi-perspective evaluation for code cl
 - Linear model： a sample linear model based on bag-of-words
 
 ## Dataset Description
-Conbigclonebench(we call it cbcb here) and googlecodejam2(we cal it gcj here)
+ConBigCloneBench(we call it cbcb here) and googlecodejam2(we cal it gcj here)
 download the dataset from (https://drive.google.com/file/d/1lPYBrll1uWxDcB5MZ308kDPfV4gVGc_Z/view?usp=sharing) and unzip it into folder 'dataset/'
 ![cbcb statistic](./fig/bcb_fun.jpg)
 ![gcj2 statistic](./fig/gcj2.jpg)
 
 ## Run Experiment
-### args
+### Args
 - dataset: cbcb | gcj, choose a dataset
 - split: random0 | pro0 | fun0 | all0, choose a evaluation perspective
 - cross: 0 | 1 | 2 | 3, choose a code abstract level
 - cuda: cuda device
-### command
+### Command
 for every model, you can use command like `python train.py --dataset gcj --split random0 --cross 1 --cuda 0` to train a model in specified evaluation perspective
-### dependency
+### Dependency
 the run enviroment for every model is different, you can use `conda env` or `virtual env`to organize the enviroments, the detail enviroment is as follow:
 ##### ASTNN
 pytorch == 1.9.0 + cuda10.2
